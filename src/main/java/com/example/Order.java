@@ -7,7 +7,7 @@ public class Order {
     private double sum;
     //全属性构造函数
 
-    public Order(User user, Item[] items) {
+    public Order(User user, Item[] items,double sum) {
         this.user = user;
         this.items = items;
         this.sum = sum;
