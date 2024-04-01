@@ -1,4 +1,4 @@
-package com.example;
+package com.example.homework02;
 
 public class Order {
     //订单实体类

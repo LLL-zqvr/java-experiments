@@ -1,4 +1,4 @@
-package com.example;
+package com.example.homework02;
 
 public class Product {
     //商品实体类

@@ -1,4 +1,4 @@
-package com.example;
+package com.example.homework02;
 
 public class OrderService {
     //订单业务逻辑处理

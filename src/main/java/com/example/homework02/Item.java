@@ -1,4 +1,4 @@
-package com.example;
+package com.example.homework02;
 
 public class Item {
     //购买向实体类

@@ -1,4 +1,4 @@
-package com.example;
+package com.example.homework02;
 
 public class User {
     //用户实体类

@@ -1,7 +1,4 @@
-package com.example;
-import com.example.OrderService;
-
-import java.util.Arrays;
+package com.example.homework02;
 
 public class Test {
     public static void main(String[] args) {
@@ -12,7 +9,7 @@ public class Test {
         Item item1 = new Item(product1,2);
         Item item2 = new Item(product3,1);
         Item[] items = {item1,item2};
-        Order oder = new Order(null,null);
+        Order oder = new Order(null,null,0);
        oder = OrderService.addOder(user1,items);
        if(oder == null){
            System.out.println("用户余额不足");
