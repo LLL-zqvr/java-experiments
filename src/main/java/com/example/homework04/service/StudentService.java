@@ -17,7 +17,7 @@ public interface StudentService {
     //将所有学生按性别分组
     Map<Student.Sex, List<Student>> listStudentsMapBySex();
     //列出指定年级学生，按学号分组
-    Map<Integer, Student> listStudentsByYearMapById(int year);
+    Map<Integer, List<Student>> listStudentsByYearMapById(int year);
     //移除指定学号的学生，返回是否移除
    boolean removeStudent(int id);
 

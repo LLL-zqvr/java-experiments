@@ -11,10 +11,10 @@ public class DatabaseUtils {
     //创造——创建包含学生数据的集合的方法
     private static List<Student> create() {
         List<Student> students = new ArrayList<>();
-        students.add( new Student("1", "张三", Student.Sex.FEMALE, 2022));
-        students.add( new Student("2", "李四", Student.Sex.MALE, 2021));
-        students.add( new Student("3", "王五", Student.Sex.FEMALE, 2022));
-        students.add( new  Student("4", "王鹏", Student.Sex.MALE, 2020));
+        students.add( new Student(1, "张三", Student.Sex.FEMALE, 2022));
+        students.add( new Student(2, "李四", Student.Sex.MALE, 2021));
+        students.add( new Student(3, "王五", Student.Sex.FEMALE, 2022));
+        students.add( new  Student(4, "王鹏", Student.Sex.MALE, 2020));
         return students;
     }
     public static List<Student> listStudents() {

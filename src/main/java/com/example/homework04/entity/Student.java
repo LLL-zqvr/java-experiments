@@ -6,22 +6,22 @@ public class Student {
     public enum Sex{
         MALE, FEMALE
     }
-    private String id;//学生id
+    private int  id;//学生id
     private String name;//学生姓名
     private Sex sex;//学生性别
     private int year;//入学年份
     public Student(){}
-    public Student (String id, String name, Sex sex, int year){
+    public Student (int  id, String name, Sex sex, int year){
         this.id = id;
         this.sex = sex;
         this.name = name;
         this.year = year;
     }
 
-    public void setId(String id){
+    public void setId(int  id){
         this.id = id;
     }
-    public String getId(){
+    public int  getId(){
         return id;
     }
 

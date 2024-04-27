@@ -3,10 +3,7 @@ package com.example.homework04.service.Impl;
 import com.example.homework04.entity.Student;
 import com.example.homework04.service.StudentService;
 
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 import static com.example.homework04.resource.DatabaseUtils.listStudents;
@@ -23,10 +20,9 @@ public class StudentServiceImpl implements StudentService {
     public List<Student> listStudentByYear(int year) {
 
         return listStudents()
-                                                .stream()
-                                                .filter(a -> year == a.getYear())
-                                                .toList();
-
+                .stream()
+                .filter(a -> year == a.getYear())
+                .toList();
     }
 
 
@@ -50,20 +46,39 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public Map<Student.Sex, List<Student>> listStudentsMapBySex() {
-        return listStudents()
+        Map<Student.Sex, List<Student>>map;
+        map = listStudents()
                 .stream()
-                .collect(Collectors.toMap(a -> a.getSex(), a -> a));
-
-
+                .collect(Collectors.groupingBy(Student::getSex));
+        return map;
     }
 
     @Override
-    public Map<Integer, Student> listStudentsByYearMapById(int year) {
-        return null;
+    public Map<Integer, List<Student>> listStudentsByYearMapById(int year) {
+        Map<Integer, List<Student>> map ;
+        map = listStudents()
+                .stream()
+                .filter(a -> a.getYear() == year)
+                .collect(Collectors.groupingBy(Student::getId));
+        return map;
     }
 
     @Override
     public boolean removeStudent(int id) {
-        return false;
+        //listStudents().removeIf(stu -> stu.getId() == id);
+       Iterator<Student>studentIterator = listStudents().iterator();
+       int flag = 0;
+        while(studentIterator.hasNext()){
+            Student stu = studentIterator.next();
+            if(stu.getId() == id){
+                studentIterator.remove();
+                flag = 1;
+            }
+        }
+        if(flag == 0){
+            return false;//没有移除
+        }else {
+            return true;//移除成功
+        }
     }
 }
