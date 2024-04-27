@@ -9,7 +9,6 @@ import com.example.homework04.service.Impl.StudentServiceImpl;
 //import java.util.stream.Collectors;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -17,8 +16,7 @@ import static com.example.homework04.resource.DatabaseUtils.listStudents;
 
 public class Test {
     public static void main(String[] args) {
-        List<Student>students = new ArrayList<>();
-        students = listStudents();
+        List<Student>students;
         Student student1 = new Student(11, "Kevan", Student.Sex.MALE, 2000);
         //静态方法若是要调用非静态方法，需要通过创建对象的方式来完成。
         StudentServiceImpl studentService = new StudentServiceImpl();
