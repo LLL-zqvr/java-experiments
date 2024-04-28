@@ -32,7 +32,6 @@ public class Test {
             System.out.println(student.getId() + "," + student.getName());
         }
         System.out.println("=============================================");
-        //根据
         students = studentService.listStudentsByYearSortedById(2022);
         for (Student student : students) {
             System.out.println(student.getId() + "," + student.getName());
