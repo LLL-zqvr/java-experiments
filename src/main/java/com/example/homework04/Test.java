@@ -2,18 +2,8 @@ package com.example.homework04;
 
 import com.example.homework04.entity.Student;
 import com.example.homework04.service.Impl.StudentServiceImpl;
-//import com.example.homework04.service.StudentService;
-//import com.example.homework04.service.Impl.StudentServiceImpl.*;
-
-//import java.util.*;
-//import java.util.stream.Collectors;
-
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-
-import static com.example.homework04.resource.DatabaseUtils.listStudents;
-
 public class Test {
     public static void main(String[] args) {
         List<Student>students;
