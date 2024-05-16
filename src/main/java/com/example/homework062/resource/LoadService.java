@@ -10,7 +10,7 @@ public class LoadService {
             for (Container container : containers) {
                 sum += container.getWeight();
                 if (sum > ship.getAllWeight())
-                
+
                 {
                     throw new OverWeightException(ship.getId(), ship.getName(), (sum - ship.getAllWeight()));
                 }
