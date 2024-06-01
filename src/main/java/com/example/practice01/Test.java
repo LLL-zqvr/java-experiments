@@ -1,12 +1,9 @@
 package com.example.practice01;
 import com.example.practice01.entity.Apple;
-import org.w3c.dom.ls.LSOutput;
 
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
-import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import static com.example.practice01.resource.DatabaseUtils.appleList;

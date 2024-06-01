@@ -34,7 +34,7 @@ public class Test {
                 containers.add(new Container(containerId, containerWeight));
             }
             try {
-                Ship loadedShip = LoadService.loadShip(ship, containers);
+                LoadService.loadShip(ship, containers);
             } catch (OverWeightException e) {
                 System.out.println("货船ID：" + e.getShipId() + "；货船名称：" + e.getName() + "；超重：" + e.getExcessWeight());
             } finally {
