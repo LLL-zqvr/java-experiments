@@ -10,6 +10,10 @@ public class User {
         this.money = money;
         this.location = location;
     }
+
+    public User() {
+    }
+
     //getter and setter
     public String getName(){
         return name;
@@ -29,4 +33,6 @@ public class User {
     public void setLocation(String location){
         this.location = location;
     }
+
+
 }

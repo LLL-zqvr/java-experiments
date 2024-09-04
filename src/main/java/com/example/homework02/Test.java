@@ -3,6 +3,7 @@ package com.example.homework02;
 public class Test {
     public static void main(String[] args) {
         User user1 = new User("小诗诗",350000,"东北林业大学");
+
         System.out.println("用户名称为：" + user1.getName());
         System.out.println("用户的金额为：" + user1.getMoney());
         System.out.println("用户的地址为：" + user1.getLocation());
